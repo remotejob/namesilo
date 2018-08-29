@@ -4,6 +4,7 @@ import (
 	"errors"
 	"io"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"strconv"
 	"strings"
@@ -46,5 +47,7 @@ func (c Client) callAPI(op string, params ...string) ([]byte, error) {
 	}
 
 	body, err := ioutil.ReadAll(io.LimitReader(r.Body, c.ReadLimit))
+
+	log.Println(string(body))
 	return body, err
 }

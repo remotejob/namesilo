@@ -56,7 +56,8 @@ func main() {
 		log.Println(err)
 	}
 
-	res0, res1, err := config.Client.RegisterDomain("saunassa.xyz", 1, "payment_id=172297", "auto_renew=0", "ns1=ns1.digitalocean.con", "ns2=ns2.digitalocean.con", "ns3=ns3.digitalocean.con")
+	res0, res1, err := config.Client.RegisterDomain("chatti.top", 1, "payment_id=172297", "auto_renew=0", "ns1=ns1.digitalocean.com", "ns2=ns2.digitalocean.com", "ns3=ns3.digitalocean.com")
+	// res0, res1, err := config.Client.RegisterDomain("chatti.top", 1, "payment_id=172297", "auto_renew=0", "ns1=NS1.DIGITALOCEAN.COM", "ns2=NS2.DIGITALOCEAN.COM", "ns3=NS3.DIGITALOCEAN.COM")
 	if err != nil {
 
 		log.Panicln("err",err.Error())
